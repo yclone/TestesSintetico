@@ -8,7 +8,7 @@ este é um projeto criado para apresentar o conceito de testes sinteticos
 
 1. 🐳 [Criando as imagens docker](#criando-as-imagens-docker)
 2. 📅 [Copiando os volumes do docker](#copiando-volumes)
-3. 🚀 [dando um UP nos container](#installation)
+3. 🚀 [Dando um UP nos container](#dandoup-containers)
 4. 🧪 [Tests](#tests)
 
 ## <a name="criando-as-imagens-docker">🐳 CRIANDO AS IMAGENS DOCKER</a>
@@ -50,7 +50,7 @@ Jenkins - https://drive.google.com/file/d/1XLAzddXAj-428q-YE7Taa9JG2vrQGd7W/view
 
 #### Recomendo utilizar a ferramenta de importação do Docker chamada "Volumes Backup & Share"
 
-## <a name="copiando-volumes">🚀 DANDO UM UP NOS CONTAINERS </a>
+## <a name="dandoup-containers">🚀 DANDO UM UP NOS CONTAINERS </a>
 
 agora é só subir o compose e temos todas as imagens criadas e prontas para serem utilizadas!
 
@@ -89,7 +89,7 @@ http://localhost:8086/
     Token: SwhyVBasxMxplf49VwJYL-ZReMPHmVikcrV_2S2naOh4tfSurvA-EKQ1KpqrVPHquurSbZHjNktfODjtGQM8Qg==
 ```
 
-## <a name="criando-as-imagens-docker">🧪 EXECUTANDO OS TESTES</a>
+## <a name="tests">🧪 EXECUTANDO OS TESTES</a>
 
 #### 📣 ATENÇÃO
 
