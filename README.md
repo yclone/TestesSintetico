@@ -22,7 +22,7 @@ docker build -t pet-front .
 	
 # backend de teste
 git clone --recursive git@github.com:yclone/PetBackend.git
-docker build -t pet-backend -f /PetBackend .
+docker build -t pet-backend -f /PetBackend/ .
 
 # imagem do projeto de teste do backend
 docker build -t backend-sintetico .
