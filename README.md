@@ -18,13 +18,16 @@ primeiro eu tenho que criar todas as imagens que eu vou usar para mostrar o exep
 #### ▶️ Commands
 ```bash
 # frontend de teste
+git clone --recursive git@github.com:yclone/PetFront.git
+docker build -t pet-front -f PetFront/Dockerfile PetFront
 docker build -t pet-front .
 	
 # backend de teste
 git clone --recursive git@github.com:yclone/PetBackend.git
-docker build -t pet-backend -f /PetBackend/ .
+docker build -t pet-backend -f PetBackend/Dockerfile PetBackend
 
 # imagem do projeto de teste do backend
+
 docker build -t backend-sintetico .
 
 # imagem do projeto de teste do Frontend
