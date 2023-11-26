@@ -11,6 +11,9 @@ este é um projeto criado para apresentar o conceito de testes sinteticos
 3. 🚀 [Dando um UP nos container](#dandoup-containers)
 4. 🧪 [Tests](#tests)
 
+</n>
+</n>
+
 ## <a name="criando-as-imagens-docker">🐳 CRIANDO AS IMAGENS DOCKER</a>
 
 primeiro eu tenho que criar todas as imagens que eu vou usar para mostrar o exeplo de aplicação com testes sinteticos, que são:
@@ -20,39 +23,47 @@ primeiro eu tenho que criar todas as imagens que eu vou usar para mostrar o exep
 # frontend de teste
 git clone --recursive git@github.com:yclone/PetFront.git
 docker build -t pet-front -f PetFront/Dockerfile PetFront
-docker build -t pet-front .
 	
 # backend de teste
 git clone --recursive git@github.com:yclone/PetBackend.git
 docker build -t pet-backend -f PetBackend/Dockerfile PetBackend
 
 # imagem do projeto de teste do backend
-
-docker build -t backend-sintetico .
+git clone --recursive git@github.com:yclone/apiSintetico.git
+docker build -t backend-sintetico -f apiSintetico/Dockerfile apiSintetico
 
 # imagem do projeto de teste do Frontend
-docker build -t web-sintetico .
+git clone --recursive git@github.com:yclone/webSintetico.git
+docker build -t web-sintetico -f webSintetico/Dockerfile webSintetico
 
 # imagem do jenkins com o docker instalado
-docker build -t custom-jenkins-docker .
+docker build -t custom-jenkins-docker -f custom-jenkins/Dockerfile custom-jenkins
 
 ```
 🚀🚀
-
+</n>
+</n>
 ## <a name="copiando-volumes">📅 COPIANDO OS VOLUMES DO JENKINS, GRAFANA E INFLUXDB </a>
 
-nesse momento eu tenho que pegar o volume do jenkins, grafana e influxdb2
+nesse momento eu tenho que baixar os volumes do jenkins, grafana e influxdb2 e depois importar para o meu DOCKER
 
 ### ▶️ Commands
-```bash
 
 Grafana - https://drive.google.com/file/d/1SiQxVrVLUx7LflFvbiwStCKKiaq-J3BC/view?usp=drive_link
 Influx - https://drive.google.com/file/d/1XbzbeLVHQ9ky2vzD5KxN-8781WHn6-F-/view?usp=drive_link
 Jenkins - https://drive.google.com/file/d/1XLAzddXAj-428q-YE7Taa9JG2vrQGd7W/view?usp=drive_link
-```
+
 🚀🚀
 
-#### Recomendo utilizar a ferramenta de importação do Docker chamada "Volumes Backup & Share"
+<b> os nomes dos volumes devem ser: </b>
+* grafana-storage
+* influxdb-storage
+* jenkins-data
+
+#### Recomendo utilizar uma extenção do Docker Desktop de importação de volumes chamada "Volumes Backup & Share"
+https://www.docker.com/blog/back-up-and-share-docker-volumes-with-this-extension/
+</n>
+</n>
 
 ## <a name="dandoup-containers">🚀 DANDO UM UP NOS CONTAINERS </a>
 
@@ -65,13 +76,24 @@ docker-compose up -d
 
 para acessar cada container na maquina basta entrar no navegador com as seguintes URLS:
 
-#### ▶️ Commands
+#### ▶️ Links, users, pass, etc.
 ```bash
 # FRONTEND
 http://localhost:8000/
 
 # BACKEND
 http://localhost:8080/user
+curl --request POST \
+  --url http://localhost:8080/user \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: Insomnia/2023.5.6' \
+  --data '{
+		"username": "teste@teste.com",
+		"email": "f4594430-7b45-402f-89ad-dded69e2a776@teste.com",
+		"nome": "Teste",
+		"sobrenome": "Teste",
+		"password": "2cc3a653-96bf-4080-9562-744fc8ef4684"
+}'
 
 #jENKINS
 http://localhost:8081/
@@ -111,7 +133,7 @@ EXECUTAR OS TESTES NO JMETER OU NO K6 PARA PODER GERAR OS ALERTAS
 VALIDAR OS ALERTAS GERADOS
 
 
-# EXTRAS
+# ✨EXTRAS
 
 ## JMETER
 
@@ -134,9 +156,11 @@ $ K6_INFLUXDB_ORGANIZATION="Testes Sinteticos" K6_INFLUXDB_BUCKET="k6sintetico" 
 ```
 
 
+Contato
+Se você tiver alguma dúvida ou problema, por favor, entre em contato comigo pelo e-mail vinicius_marra@hotmail.com.
 
 
-# proximos passos:
+# :
 
 4. 🚀 [Build](#build)
 5. 🐳 [Docker](#docker)
@@ -146,46 +170,3 @@ $ K6_INFLUXDB_ORGANIZATION="Testes Sinteticos" K6_INFLUXDB_BUCKET="k6sintetico" 
 9. ✨ [Misc commands](#misc-commands)
 10. ©️ [License](#license)
 11. ❤️ [Contributors](#contributors)
-
-
-criar um alerta para um tempo de resposta grande, que vai acontecer durante a execuação do teste de performance
-
-
-Como usar
-### Para clonar o repositório e seus submódulos, execute o seguinte comando:
-
-git clone --recursive https://github.com/yclone/PetFront
-Isso irá clonar o repositório principal e seus submódulos.
-
-Para criar as imagens Docker dos projetos front-end e back-end, execute os seguintes comandos:
-
-
-Para subir as aplicações, execute o seguinte comando:
-
-
-Isso irá subir as aplicações front-end e back-end, bem como o banco de dados.
-
-Para parar as aplicações, execute o seguinte comando:
-
-docker-compose down
-Comandos úteis
-Os seguintes comandos podem ser úteis para trabalhar com este projeto:
-
-Para entrar na imagem Docker e fazer testes via SSH:
-docker run -d {IMAGEM} sleep infinity
-docker exec -it {ID DO CONTAINER} /bin/bash
-Para subir o Selenium na porta 8888:
-java -jar selenium-server-4.13.0.jar standalone --port 8888
-Para criar a imagem Docker dos testes de front:
-docker build -t web-sintetico .
-Para rodar os testes de front:
-docker run --network dev_sinteticos-network --ip 172.18.0.55 --rm web-sintetico mvn clean test
-Para criar a imagem Docker dos testes de backend:
-docker build -t backend-sintetico .
-Para rodar os testes de backend:
-docker run --network dev_sinteticos-network --ip 172.18.0.56 --rm backend-sintetico mvn clean test
-Jenkins
-Para usar o Jenkins com este projeto, você precisará configurar um pipeline para rodar os testes e construir as imagens Docker.
-
-Contato
-Se você tiver alguma dúvida ou problema, por favor, entre em contato comigo pelo e-mail vinicius_marra@hotmail.com.
