@@ -1,17 +1,8 @@
 # 🚀 Bem-vindo ao Projeto de Testes Sintéticos!
-
-<img loading="" src="https://www.svgviewer.dev/static-svgs/34448/docker.svg" width="40" height="40"/>
-<img loading="" src="https://www.svgrepo.com/show/184143/java.svg" width="40" height="40"/>
-<img loading="" src="https://www.svgrepo.com/show/333604/spring-boot.svg" width="40" height="40"/>
-<img loading="" src="https://www.svgrepo.com/download/353625/cucumber.svg" width="40" height="40"/>
-<img loading="" src="https://www.svgrepo.com/show/373699/jenkins.svg" width="40" height="40"/>
-<img loading="" src="https://www.svgrepo.com/show/448457/grafana.svg" width="40" height="40"/>
-
-</n></n>
-
-
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 
+<img loading="" src="https://www.svgviewer.dev/static-svgs/34448/docker.svg" width="40" height="40"/> <img loading="" src="https://www.svgrepo.com/show/184143/java.svg" width="40" height="40"/> <img loading="" src="https://www.svgrepo.com/show/333604/spring-boot.svg" width="40" height="40"/> <img loading="" src="https://www.svgrepo.com/download/353625/cucumber.svg" width="40" height="40"/> <img loading="" src="https://www.svgrepo.com/show/373699/jenkins.svg" width="40" height="40"/> <img loading="" src="https://www.svgrepo.com/show/448457/grafana.svg" width="40" height="40"/>
 
 
 Você acabou de entrar no mundo incrível onde a magia dos testes sintéticos acontece! ✨ Este projeto foi criado com o propósito nobre de desvendar os mistérios por trás dos testes sintéticos de uma forma simples e educativa.
