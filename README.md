@@ -1,8 +1,34 @@
-# Projeto de Submódulos
+# 🚀 Bem-vindo ao Projeto de Testes Sintéticos!
 
-este é um projeto criado para apresentar o conceito de testes sinteticos
+<img loading="" src="https://www.svgviewer.dev/static-svgs/34448/docker.svg" width="40" height="40"/>
+<img loading="" src="https://www.svgrepo.com/show/184143/java.svg" width="40" height="40"/>
+<img loading="" src="https://www.svgrepo.com/show/333604/spring-boot.svg" width="40" height="40"/>
+<img loading="" src="https://www.svgrepo.com/download/353625/cucumber.svg" width="40" height="40"/>
+<img loading="" src="https://www.svgrepo.com/show/373699/jenkins.svg" width="40" height="40"/>
+<img loading="" src="https://www.svgrepo.com/show/448457/grafana.svg" width="40" height="40"/>
 
-<img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40"/>
+</n></n>
+
+
+![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
+
+
+
+Você acabou de entrar no mundo incrível onde a magia dos testes sintéticos acontece! ✨ Este projeto foi criado com o propósito nobre de desvendar os mistérios por trás dos testes sintéticos de uma forma simples e educativa.
+
+#### 🧪 O que esperar por aqui?
+Prepare-se para uma jornada emocionante pelos corredores dos testes, onde cada linha de código é um passo mais perto da compreensão profunda dos testes sintéticos. Nossa missão? Fazer do processo de teste algo tão natural quanto um abraço de um amigo.
+
+#### 💡 Por que sintéticos?
+Porque adoramos a ideia de criar um ambiente de testes que seja mais brilhante que um unicórnio colorido! Os testes sintéticos são como a fada madrinha dos testes - eles aparecem, fazem a mágica acontecer e deixam tudo mais fácil.
+
+#### 🎉 Junte-se a nós!
+Quer ser parte dessa jornada? Clone este repositório e embarque na aventura dos testes sintéticos. Sua presença é mais do que bem-vinda - é essencial!
+
+Vamos transformar o mundano em extraordinário, uma linha de código por vez.🚀❤️
+
+
+
 
 ## 📋 Vamos por partes
 
@@ -49,11 +75,12 @@ nesse momento eu tenho que baixar os volumes do jenkins, grafana e influxdb2 e d
 
 ### ▶️ Commands
 
-Grafana - https://drive.google.com/file/d/1SiQxVrVLUx7LflFvbiwStCKKiaq-J3BC/view?usp=drive_link</n>
-Influx - https://drive.google.com/file/d/1XbzbeLVHQ9ky2vzD5KxN-8781WHn6-F-/view?usp=drive_link</n>
-Jenkins - https://drive.google.com/file/d/1XLAzddXAj-428q-YE7Taa9JG2vrQGd7W/view?usp=drive_link</n>
+* [Grafana](https://drive.google.com/file/d/1SiQxVrVLUx7LflFvbiwStCKKiaq-J3BC/view?usp=drive_link) 
+* [Influx](https://drive.google.com/file/d/1XbzbeLVHQ9ky2vzD5KxN-8781WHn6-F-/view?usp=drive_link) 
+* [Jenkins](https://drive.google.com/file/d/1XLAzddXAj-428q-YE7Taa9JG2vrQGd7W/view?usp=drive_link) 
 
 🚀🚀
+
 
 <b> os nomes dos volumes devem ser: </b>
 * grafana-storage
