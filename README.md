@@ -28,6 +28,10 @@ Vamos transformar o mundano em extraordinário, uma linha de código por vez.�
 2. 📅 [Copiando os volumes do docker](#copiando-volumes)
 3. 🚀 [Dando um UP nos container](#dandoup-containers)
 4. 🧪 [Tests](#tests)
+5. ✨ [EXTRAS](#EXTRAS)
+6. 🤝 [Contribuindo](#Contribuindo)
+7. 👀 [Contato](#Contato)
+7. ⚠️ [License](#License)
 
 </n>
 </n>
@@ -152,7 +156,7 @@ EXECUTAR OS TESTES NO JMETER OU NO K6 PARA PODER GERAR OS ALERTAS
 VALIDAR OS ALERTAS GERADOS
 
 
-# ✨EXTRAS
+# <a name="EXTRAS">✨EXTRAS
 
 ## JMETER
 
@@ -174,15 +178,15 @@ para executar o teste basta dar o comando (esse comando esta no site do K6, ele 
 $ K6_INFLUXDB_ORGANIZATION="Testes Sinteticos" K6_INFLUXDB_BUCKET="k6sintetico" K6_INFLUXDB_TOKEN="SwhyVBasxMxplf49VwJYL-ZReMPHmVikcrV_2S2naOh4tfSurvA-EKQ1KpqrVPHquurSbZHjNktfODjtGQM8Qg==" K6_INFLUXDB_ADDR="http://localhost:8086" ./k6 run scenarios/Get-health.js -o xk6-influxdb
 ```
 
-## 🤝 Contribuindo
+## <a name="Contribuindo"> 🤝 Contribuindo </a>
 
 Solicitações pull são bem-vindas. Para mudanças importantes, abra um problema primeiro
 para discutir o que você gostaria de mudar.
 
 
-## ©️ Contato
+## <a name="Contato"> 👀 Contato </a>
 Se você tiver alguma dúvida ou problema, por favor, entre em contato comigo pelo [Linkedin](https://www.linkedin.com/in/vinicius-marra-santos-20b17949/) ou pelo e-mail vinicius_marra@hotmail.com.
 
-## License
+## <a name="License">⚠️ License </a>
 
 [MIT](https://github.com/yclone)
