@@ -182,18 +182,15 @@ para executar o teste basta dar o comando (esse comando esta no site do K6, ele 
 $ K6_INFLUXDB_ORGANIZATION="Testes Sinteticos" K6_INFLUXDB_BUCKET="k6sintetico" K6_INFLUXDB_TOKEN="SwhyVBasxMxplf49VwJYL-ZReMPHmVikcrV_2S2naOh4tfSurvA-EKQ1KpqrVPHquurSbZHjNktfODjtGQM8Qg==" K6_INFLUXDB_ADDR="http://localhost:8086" ./k6 run scenarios/Get-health.js -o xk6-influxdb
 ```
 
+## 🤝 Contribuindo
 
-Contato
-Se você tiver alguma dúvida ou problema, por favor, entre em contato comigo pelo e-mail vinicius_marra@hotmail.com.
+Solicitações pull são bem-vindas. Para mudanças importantes, abra um problema primeiro
+para discutir o que você gostaria de mudar.
 
 
-# :
+## ©️ Contato
+Se você tiver alguma dúvida ou problema, por favor, entre em contato comigo pelo [Linkedin](https://www.linkedin.com/in/vinicius-marra-santos-20b17949/) ou pelo e-mail vinicius_marra@hotmail.com.
 
-4. 🚀 [Build](#build)
-5. 🐳 [Docker](#docker)
-6. 💯 [Tests](#tests)
-7. ☑️ [Code analysis and consistency](#code-analysis-and-consistency)
-8. 📈 [Releases & Changelog](#versions)
-9. ✨ [Misc commands](#misc-commands)
-10. ©️ [License](#license)
-11. ❤️ [Contributors](#contributors)
+## License
+
+[MIT](https://github.com/yclone)
