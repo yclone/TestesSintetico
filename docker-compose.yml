@@ -9,7 +9,7 @@ services:
         ipv4_address: 172.18.0.4
 
   pet-front:
-    image: teste-front:latest
+    image: pet-front:latest
     ports:
       - "8000:80"
     networks:
