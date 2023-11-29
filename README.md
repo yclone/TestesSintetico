@@ -43,19 +43,19 @@ primeiro eu tenho que criar todas as imagens que eu vou usar para mostrar o exep
 #### ▶️ Commands
 ```bash
 # frontend de teste
-git clone --recursive git@github.com:yclone/PetFront.git
+git clone --recursive https://github.com/yclone/PetFront.git
 docker build -t pet-front -f PetFront/Dockerfile PetFront
 	
 # backend de teste
-git clone --recursive git@github.com:yclone/PetBackend.git
+git clone --recursive https://github.com/yclone/PetBackend.git
 docker build -t pet-backend -f PetBackend/Dockerfile PetBackend
 
 # imagem do projeto de teste do backend
-git clone --recursive git@github.com:yclone/apiSintetico.git
+git clone --recursive https://github.com/yclone/apiSintetico.git
 docker build -t backend-sintetico -f apiSintetico/Dockerfile apiSintetico
 
 # imagem do projeto de teste do Frontend
-git clone --recursive git@github.com:yclone/webSintetico.git
+git clone --recursive https://github.com/yclone/webSintetico.git
 docker build -t web-sintetico -f webSintetico/Dockerfile webSintetico
 
 # imagem do jenkins com o docker instalado
