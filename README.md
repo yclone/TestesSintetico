@@ -100,12 +100,11 @@ docker-compose up -d
 para acessar cada container na maquina basta entrar no navegador com as seguintes URLS:
 
 #### ▶️ Links, users, pass, etc.
+* <b>Frontend</b> = http://localhost:8000/
+</n>
+</n>
+* <b>Brackend</b> = http://localhost:8080/user
 ```bash
-# FRONTEND
-http://localhost:8000/
-
-# BACKEND
-http://localhost:8080/user
 curl --request POST \
   --url http://localhost:8080/user \
   --header 'Content-Type: application/json' \
@@ -117,19 +116,19 @@ curl --request POST \
 		"sobrenome": "Teste",
 		"password": "2cc3a653-96bf-4080-9562-744fc8ef4684"
 }'
-
-#jENKINS
-http://localhost:8081/
+```
+* <b> Jenkins </b> = http://localhost:8081/
+```bash
     USER: vinicius_marra
     PASS: SuperSecret
-
-#GRAFANA
-http://localhost:3000/
+```
+* <b> Grafana </b> = http://localhost:3000/ 
+```bash
     USER: admin
     PASS: admin
-
-#INFLUXDB
-http://localhost:8086/
+```
+* <b> Influxdb </b> = http://localhost:8086/
+```bash
     USER: sintetico Test
     PASS: admin123
     Bucket: sinteticoTestJmeter
@@ -149,34 +148,21 @@ http://localhost:8086/
 * adicionar no teams o plugin do grafana para os alertas do grafana
 </b>
 
-
-PASSOS:
-PARAR O CONTAINER DO BACKEND
-EXECUTAR OS TESTES NO JMETER OU NO K6 PARA PODER GERAR OS ALERTAS
-VALIDAR OS ALERTAS GERADOS
-
-
-# <a name="EXTRAS">✨EXTRAS
-
-## JMETER
+#### JMETER
 
 para rodar os testes com o jmeter é necessario instalar os seguintes plugins:
 
+* 3 Basic Graphs
+* Custom Thread Groups
+* Throughput Shaping Timer
 
-## K6
-para rodar os testes do K6 com o conector do influx é necessario instalar o Go
-entra dentro da pasta do teste de performance e executa os comandos:
-### Install xk6
-go install go.k6.io/xk6/cmd/xk6@latest
+depois é só abri o projeto e executar, esta configurado para exexutar com 100 threads em 100 ms
 
-### Build the k6 binary
-xk6 build --with github.com/grafana/xk6-output-influxdb
+#### Passos para simular os erros:
+PARAR O CONTAINER DO BACKEND
+EXECUTAR OS TESTES NO JMETER PARA PODER GERAR OS ALERTAS
+VALIDAR OS ALERTAS GERADOS
 
-para executar o teste basta dar o comando (esse comando esta no site do K6, ele funciona para o influxdb2):
-#### ▶️ Commands
-```bash
-$ K6_INFLUXDB_ORGANIZATION="Testes Sinteticos" K6_INFLUXDB_BUCKET="k6sintetico" K6_INFLUXDB_TOKEN="SwhyVBasxMxplf49VwJYL-ZReMPHmVikcrV_2S2naOh4tfSurvA-EKQ1KpqrVPHquurSbZHjNktfODjtGQM8Qg==" K6_INFLUXDB_ADDR="http://localhost:8086" ./k6 run scenarios/Get-health.js -o xk6-influxdb
-```
 
 ## <a name="Contribuindo"> 🤝 Contribuindo </a>
 
