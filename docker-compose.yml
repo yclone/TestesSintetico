@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.4
+        ipv4_address: 172.168.0.4
 
   pet-front:
     image: pet-front:latest
@@ -14,7 +14,7 @@ services:
       - "8000:80"
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.5
+        ipv4_address: 172.168.0.5
 
   jenkins:
     image: custom-jenkins-docker
@@ -22,7 +22,7 @@ services:
       - "8081:8080"
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.2
+        ipv4_address: 172.168.0.2
     volumes:
       - jenkins-data:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
@@ -37,7 +37,7 @@ services:
       - "4444:4444"
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.10
+        ipv4_address: 172.168.0.10
 
   chrome:
     image: selenium/node-chrome:4.13.0-20231004
@@ -54,7 +54,7 @@ services:
       - "5900:5900"  # Adiciona a porta 5900 para VNC
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.11
+        ipv4_address: 172.168.0.11
 
   edge:
     image: selenium/node-edge:4.13.0-20231004
@@ -67,7 +67,7 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.12
+        ipv4_address: 172.168.0.12
 
   firefox:
     image: selenium/node-firefox:4.13.0-20231004
@@ -80,7 +80,7 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.13
+        ipv4_address: 172.168.0.13
         
   influxdb:
     image: influxdb:latest
@@ -89,7 +89,7 @@ services:
       - "8086:8086"
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.14
+        ipv4_address: 172.168.0.14
     volumes:
       - influxdb-storage:/var/lib/influxdb2
     environment:
@@ -104,7 +104,7 @@ services:
       - influxdb
     networks:
       sinteticos-network:
-        ipv4_address: 172.18.0.15
+        ipv4_address: 172.168.0.15
     volumes:
       - grafana-storage:/var/lib/grafana
     
