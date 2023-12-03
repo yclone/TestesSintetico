@@ -101,8 +101,7 @@ para acessar cada container na maquina basta entrar no navegador com as seguinte
 
 #### ▶️ Links, users, pass, etc.
 * <b>Frontend =</b> http://localhost:8000/
-</n>
-</n>
+
 * <b>Brackend =</b> http://localhost:8080/user
 ```bash
 curl --request POST \
