@@ -100,10 +100,10 @@ docker-compose up -d
 para acessar cada container na maquina basta entrar no navegador com as seguintes URLS:
 
 #### ▶️ Links, users, pass, etc.
-* <b>Frontend</b> = http://localhost:8000/
+* <b>Frontend =</b> http://localhost:8000/
 </n>
 </n>
-* <b>Brackend</b> = http://localhost:8080/user
+* <b>Brackend =</b> http://localhost:8080/user
 ```bash
 curl --request POST \
   --url http://localhost:8080/user \
@@ -117,17 +117,17 @@ curl --request POST \
 		"password": "2cc3a653-96bf-4080-9562-744fc8ef4684"
 }'
 ```
-* <b> Jenkins </b> = http://localhost:8081/
+* <b> Jenkins = </b> http://localhost:8081/
 ```bash
     USER: vinicius_marra
     PASS: SuperSecret
 ```
-* <b> Grafana </b> = http://localhost:3000/ 
+* <b> Grafana =</b> http://localhost:3000/ 
 ```bash
     USER: admin
     PASS: admin
 ```
-* <b> Influxdb </b> = http://localhost:8086/
+* <b> Influxdb =</b> http://localhost:8086/
 ```bash
     USER: sintetico Test
     PASS: admin123
